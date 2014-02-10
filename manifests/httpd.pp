@@ -9,9 +9,9 @@ class oracle_as::httpd(
 
   service {'oracle_as_httpd':
     ensure  => $ensure,
-    start   => '',
-    stop    => '',
-    restart => '',
-    status  => '',
+    start   => "${oracle_home}/bin/opmnctl startproc ias-component=HTTP_Server",
+    stop    => "${oracle_home}/bin/opmnctl stopproc ias-component=HTTP_Server",
+    restart => "${oracle_home}/bin/opmnctl restartproc ias-component=HTTP_Server",
+    status  => "${oracle_home}/bin/opmnctl status",
   }
 }
