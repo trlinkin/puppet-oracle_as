@@ -1,4 +1,4 @@
-define oracle_as::forms (
+class oracle_as::forms (
   $oracle_home                = $oracle_as::oracle_home,
   $default_basehtml           = 'base.htm',
   $default_basehtmljinitiator = 'basejini.htm',

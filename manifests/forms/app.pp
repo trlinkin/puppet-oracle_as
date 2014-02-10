@@ -19,7 +19,7 @@ define oracle_as::forms::app (
 
   file { "${application_name}-env" :
     ensure  => file,
-    path    => '',
+    path    => "${oracle_home}/forms/server/${application_name}.env",
     content => template('oracle_as/forms_app_env.erb'),
   }
 }
